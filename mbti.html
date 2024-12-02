@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>测测你的mbti！</title>
+<script>
+function getMBTI() {
+    var extrovert = document.getElementById("extrovert").checked;
+    var introvert = document.getElementById("introvert").checked;
+    var intuitive = document.getElementById("intuitive").checked;
+    var sensing = document.getElementById("sensing").checked;
+    var feeling = document.getElementById("feeling").checked;
+    var thinking = document.getElementById("thinking").checked;
+    var judging = document.getElementById("judging").checked;
+    var perceiving = document.getElementById("perceiving").checked;
+
+    var mbtiType = "";
+    if (extrovert) mbtiType += "E";
+    else mbtiType += "I";
+    if (intuitive) mbtiType += "N";
+    else mbtiType += "S";
+    if (feeling) mbtiType += "F";
+    else mbtiType += "T";
+    if (judging) mbtiType += "J";
+    else mbtiType += "P";
+
+    alert("你的MBTI类型是：" + mbtiType);
+}
+</script>
+</head>
+<body>
+
+<h1>测测你的mbti！</h1>
+
+<form id="mbtiForm">
+    <p>你性格外向还是内向？</p>
+    <input type="radio" id="extrovert" name="attitude" value="extrovert">
+    <label for="extrovert">外向</label>
+    <input type="radio" id="introvert" name="attitude" value="introvert">
+    <label for="introvert">内向</label><br>
+
+    <p>你偏向直觉还是实感？</p>
+    <input type="radio" id="intuitive" name="perception" value="intuitive">
+    <label for="intuitive">直觉</label>
+    <input type="radio" id="sensing" name="perception" value="sensing">
+    <label for="sensing">实感</label><br>
+
+    <p>你偏向情感还是思维？</p>
+    <input type="radio" id="feeling" name="judging" value="feeling">
+    <label for="feeling">情感</label>
+    <input type="radio" id="thinking" name="judging" value="thinking">
+    <label for="thinking">思维</label><br>
+
+    <p>你偏向判断还是知觉？</p>
+    <input type="radio" id="judging" name="preference" value="judging">
+    <label for="judging">判断</label>
+    <input type="radio" id="perceiving" name="preference" value="perceiving">
+    <label for="perceiving">知觉</label><br>
+
+    <input type="button" value="提交" onclick="getMBTI()">
+</form>
+
+</body>
+</html>
